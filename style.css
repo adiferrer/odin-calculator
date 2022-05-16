@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+body {
+    height: 98vh;
+    display: flex;
+    align-items: center;
+}
+
+#container {
+    background-color: #363062;
+    width: 400px;
+    height: 500px;
+    padding: 10px;
+    border: 1px solid #363062;
+    border-radius: 12px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#input {
+    color: #E9D5DA;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 48px;
+    height: 100px;
+    display: inherit;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#button-pad {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.operators, .digits, #equals, #clear {
+    color: #E9D5DA;
+    font-family: 'Work Sans', sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.operators, #equals, #clear {
+    background-color: #827397;
+    border: 1px solid #827397;
+}
+
+.digits {
+    background-color: #4D4C7D;
+    border: 1px solid #4D4C7D;
+}
+
+.operators-clicked {
+    background-color: #7a6497e8;
+}
+
+#clear, #zero {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
