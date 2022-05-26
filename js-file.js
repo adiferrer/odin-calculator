@@ -30,6 +30,7 @@ const digitButtons = Array.from(document.querySelectorAll('.digits'))
 const operatorButtons = Array.from(document.querySelectorAll('.operators'));
 const equalButton = document.getElementById('equals');
 const clearButton = document.getElementById('clear');
+const decimalButton = document.getElementById('decimal-point');
 let firstValue = '';
 let secondValue = '';
 let currentOperator = '';
@@ -61,6 +62,8 @@ for (let d = 0; d < digitButtons.length; d++) {
             }
         }
 
+        // add code to make the 0 button work accordingly
+
         if (display.textContent.length == 13) {
             display.textContent = display.textContent.substr(0, 13);  
         } else {
@@ -68,6 +71,24 @@ for (let d = 0; d < digitButtons.length; d++) {
         }
     });
 }
+
+// add code for the decimal point event listener
+decimalButton.addEventListener('click', () => {
+    if (display.textContent.indexOf('.') < 0) {
+        if (currentOperator == '' && firstValue.indexOf('.') < 0) {
+            if (firstValue == '') {
+                firstValue += '0';
+            } 
+            firstValue += '.'; 
+        } else if (currentOperator != '' && secondValue.indexOf('.') < 0) {
+            if (secondValue == '') {
+                secondValue += '0';
+            }
+            secondValue += '.'; 
+        }
+        display.textContent += '.';
+    }
+});
 
 for (let o = 0; o < operatorButtons.length; o++) {
     operatorButtons[o].addEventListener('click', () => {
@@ -88,7 +109,7 @@ for (let o = 0; o < operatorButtons.length; o++) {
         } else if (fullExpression.lastIndexOf('=') == fullExpression.length - 2) secondValue = '';
         operatorButtons[o].classList.add('operators-clicked');
         if (firstValue != '') currentOperator = operatorButtons[o].textContent;
-    })
+    });
 }
 
 equalButton.addEventListener('click', () => {
@@ -115,4 +136,4 @@ clearButton.addEventListener('click', () => {
         secondValue = '';
         fullExpression = [];
     }
-})
+});

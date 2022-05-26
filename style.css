@@ -35,19 +35,19 @@ body {
     gap: 10px;
 }
 
-.operators, .digits, #equals, #clear {
+button {
     color: #E9D5DA;
     font-family: 'Work Sans', sans-serif;
     padding: 5px;
     border-radius: 5px;
 }
 
-.operators, #equals, #clear {
+#clear, #equals, .operators {
     background-color: #827397;
     border: 1px solid #827397;
 }
 
-.digits {
+.digits, #decimal-point {
     background-color: #4D4C7D;
     border: 1px solid #4D4C7D;
 }
@@ -56,7 +56,12 @@ body {
     background-color: #7a6497e8;
 }
 
-#clear, #zero {
+#clear {
     grid-column-start: 1;
     grid-column-end: 4;
+}
+
+#zero {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
