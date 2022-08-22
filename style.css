@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
 
 body {
-    height: 98vh;
+    height: 100vh;
+    margin: 0px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -18,7 +21,7 @@ body {
     flex-direction: column;
 }
 
-#input {
+#screen {
     color: #E9D5DA;
     font-family: 'Work Sans', sans-serif;
     font-size: 48px;
@@ -26,6 +29,10 @@ body {
     display: inherit;
     justify-content: flex-end;
     align-items: center;
+}
+
+#input-box {
+    margin: 0px;
 }
 
 #button-pad {
@@ -42,26 +49,33 @@ button {
     border-radius: 5px;
 }
 
-#clear, #equals, .operators {
+#equals, .operators{
     background-color: #827397;
     border: 1px solid #827397;
 }
 
-.digits, #decimal-point {
+.digits, #decimal-point{
     background-color: #4D4C7D;
     border: 1px solid #4D4C7D;
+}
+
+#clear, #delete {
+    background-color: #5B4B8A;
+    border: 1px solid #5B4B8A;
 }
 
 .operators-clicked {
     background-color: #7a6497e8;
 }
 
-#clear {
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-
-#zero {
+#zero, #clear {
     grid-column-start: 1;
     grid-column-end: 3;
 }
+
+/* #footer {
+    width: 100vw;
+    background-color: rgb(173, 173, 173);
+    display: inherit;
+    justify-content: center;
+} */

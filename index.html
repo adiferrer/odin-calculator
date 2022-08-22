@@ -6,37 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="js-file.js" defer></script>
+    <!-- <script src="test.js" defer></script> -->
     <title>My Calculator</title>
 </head>
 <body>
     <div id="container">
-        <div id="input">
+        <div id="screen">
+            <p id="expression-box"></p>
             <p id="input-box"></p>
         </div>
         <div id="button-pad">
             <button id="clear">A/C</button>
-            <button class="operators">&divide;</button>
+            <button id="delete">Del</button>
+            <button data-key="220" class="operators">&divide;</button>
 
-            <button class="digits">7</button>
-            <button class="digits">8</button>
-            <button class="digits">9</button>
+            <button data-key="55" class="digits">7</button>
+            <button data-key="56" class="digits">8</button>
+            <button data-key="57" class="digits">9</button>
             <button class="operators">&times;</button>
             
-            <button class="digits">4</button>
-            <button class="digits">5</button>
-            <button class="digits">6</button>
-            <button class="operators">-</button>
+            <button data-key="52" class="digits">4</button>
+            <button data-key="53" class="digits"><kbd>5</kbd></button>
+            <button data-key="54" class="digits">6</button>
+            <button data-key="189" class="operators">-</button>
 
-            <button class="digits">1</button>
-            <button class="digits">2</button>
-            <button class="digits">3</button>
-            <button class="operators">+</button>
+            <button data-key="49" class="digits">1</button>
+            <button data-key="50" class="digits">2</button>
+            <button data-key="51" class="digits">3</button>
+            <button data-key="107" class="operators">+</button>
 
-            <button id="zero" class="digits">0</button>
-            <button id="decimal-point">.</button>
-            <button id="equals">=</button>  
+            <button data-key="48" id="zero" class="digits">0</button>
+            <button data-key="190" id="decimal-point">.</button>
+            <button data-key="187" id="equals">=</button>  
         </div>
-        
     </div>
+    <!-- <div id="footer">Odin Project</div> -->
 </body>
 </html>
