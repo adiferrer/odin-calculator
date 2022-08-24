@@ -1,9 +1,9 @@
 # Odin Calculator
 
-- Got it working for single operator expressions
-- Clear Button is Working
+This project is part of the Foundations Course for TOP.
 
-TODO:
-- get backspace button to work
-- add keyboard assist
-- 
+Some features to be included/debugged:
+- Backspace button
+- Keyboard support
+- Length of number on display
+- Header and footer of website
