@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
 
+:root {
+    --bg-color: #363062;
+    --text-color: #E9D5DA;
+    --symbol-btn-color: #827397;
+    --number-btn-color: #4D4C7D;
+    --other-btn-color: #5B4B8A;
+    --clicked-btn-color: #7a6497e8;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Work Sans', sans-serif;
+}
+
 body {
     height: 100vh;
     margin: 0px;
@@ -7,14 +22,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--text-color);
+    gap: 1em;
 }
 
 #container {
-    background-color: #363062;
+    background-color: var(--bg-color);
     width: 400px;
     height: 500px;
     padding: 10px;
-    border: 1px solid #363062;
     border-radius: 12px;
     margin: 0 auto;
     display: flex;
@@ -22,7 +38,7 @@ body {
 }
 
 #screen {
-    color: #E9D5DA;
+    color: var(--text-color);
     font-family: 'Work Sans', sans-serif;
     font-size: 48px;
     height: 100px;
@@ -43,29 +59,32 @@ body {
 }
 
 button {
-    color: #E9D5DA;
+    appearance: none;
+    border: none;
+    color: var(--text-color);
     font-family: 'Work Sans', sans-serif;
     padding: 5px;
     border-radius: 5px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 #equals, .operators{
-    background-color: #827397;
-    border: 1px solid #827397;
+    background-color: var(--symbol-btn-color);
 }
 
 .digits, #decimal-point{
-    background-color: #4D4C7D;
-    border: 1px solid #4D4C7D;
+    background-color: var(--number-btn-color);
 }
 
 #clear, #delete {
-    background-color: #5B4B8A;
-    border: 1px solid #5B4B8A;
+    background-color: var(--other-btn-color);
 }
 
 .operators-clicked {
-    background-color: #7a6497e8;
+    background-color: var(--clicked-btn-color);
 }
 
 #zero, #clear {
@@ -73,9 +92,16 @@ button {
     grid-column-end: 3;
 }
 
-/* #footer {
-    width: 100vw;
-    background-color: rgb(173, 173, 173);
-    display: inherit;
-    justify-content: center;
-} */
+footer,
+footer a {
+    color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--symbol-btn-color);
+    text-decoration: underline;
+}
